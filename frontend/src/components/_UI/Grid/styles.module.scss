@@ -1,0 +1,9 @@
+@import '../../../../public/assets/styles/resources';
+
+.grid {
+    @include set-container();
+}
+
+.row {
+    @include set-flex-row();
+}

@@ -1,0 +1,117 @@
+@import "./theme/variables";
+
+.App-header,
+.App-form,
+.App-tweeter,
+.App-footer {
+    margin-left: -$sp_indent;
+    margin-right: -$sp_indent;
+    padding: $sp_indent/2;
+    border-bottom: 1px solid $border-color;
+}
+
+.App-header {
+    box-shadow: 0 0 20px $border-color;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: $light;
+
+    div {
+        display: flex;
+        cursor: pointer;
+
+        img {
+            max-height: 60px;
+            margin: -10px 0;
+        }
+    }
+
+    img {
+        max-height: 26px;
+        margin-right: 7px;
+    }
+}
+
+.App-tweeter {
+    flex: 1;
+    border: none;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    .list-tweets {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 30px;
+
+        li {
+            display: block;
+            margin: 0;
+            margin-left: -10px;
+            margin-right: -10px;
+            padding: 20px;
+            border-bottom: 1px solid $border-color;
+            border-radius: 10px;
+            display: flex;
+
+            &:nth-child(2n-1) {
+                background: lighten($border-color, 18);
+            }
+
+            .message-avatar {
+                min-width: 50px;
+                width: 50px;
+                margin-right: 15px;
+            }
+
+            .message-from {
+                font-size: 12px;
+                word-break: break-word;
+
+                strong {
+                    font-size: 16px;
+                }
+            }
+
+            .message-time {
+                font-size: 11px;
+                transition: all 0.2s ease-in-out;
+                opacity: .7;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .message-text {
+                margin-top: 7px;
+                font-size: 18px;
+                min-width: 65%;
+                display: inline-block;
+                padding: 5px 10px;
+                border-radius: 5px;
+                border: 1px solid lighten($border-color, 10);
+                background: $light;
+            }
+        }
+    }
+
+    .MuiPagination-ul {
+        justify-content: center;
+    }
+
+}
+
+.App-footer {
+    margin-top: 30px;
+    border: none;
+    border-top: 1px solid $border-color;
+    font-weight: 700;
+}

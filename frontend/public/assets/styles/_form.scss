@@ -1,0 +1,82 @@
+@import "./theme/variables";
+
+.App-form {
+    position: relative;
+
+    .form-container {
+        overflow: hidden;
+
+        @media (min-width: $sp_bp) {
+            transition: all 0.4s ease-in-out;
+        }
+
+        &.form-show {
+            @media (min-width: $sp_bp) {
+                height: 280px;
+
+            }
+        }
+
+        &.form-hide {
+            height: 0;
+        }
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        p {
+            user-select: none;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+    form {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @media (min-width: $xsp_bp) {
+            flex-direction: row;
+        }
+
+        button {
+            margin-top: 10px;
+            min-height: 50px;
+
+            @media (min-width: $xsp_bp) {
+                margin-top: 0;
+                margin-left: 10px;
+            }
+        }
+
+        .MuiFormControl-marginNormal {
+            margin: 0;
+            flex: 1;
+        }
+
+    }
+
+    .form-vertical {
+        flex-direction: column;
+
+        button {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+    }
+
+    .form-error {
+        flex-basis: 100%;
+        color: $warning-color;
+    }
+}

@@ -1,0 +1,59 @@
+@mixin set-container {
+    width: $container_sp_width;
+    padding-left: $sp_indent;
+    padding-right: $sp_indent;
+    margin: 0 auto;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    min-height: 100vh;
+    box-shadow: 0 0 150px $border-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+
+    @media (min-width: $tb_bp) {
+        max-width: $container_tb_width;
+        padding-left: $tb_indent;
+        padding-right: $tb_indent;
+    }
+    @media (min-width: $dt_bp) {
+        max-width: $container_dt_width;
+        padding-left: $dt_indent;
+        padding-right: $dt_indent;
+    }
+}
+
+@mixin set-flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+@mixin set-scrollbar-styles($width: 5px, $color: $primary_color, $color-bg: $secondary_color) {
+    &::-webkit-scrollbar {
+        width: $width;
+        height: $width;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $color-bg;
+    }
+}
+
+
+$gradient_color1: #429bdb;
+$gradient_color2: #2d6fab;
+
+%gradient1 {
+    background: $gradient_color1;
+    background: -moz-linear-gradient(left, $gradient_color1 0%, $gradient_color2 100%);
+    background: -webkit-linear-gradient(left, $gradient_color1 0%, $gradient_color2 100%);
+    background: linear-gradient(to right, $gradient_color1 0%, $gradient_color2 100%);
+}

@@ -1,0 +1,39 @@
+@import "./theme/variables";
+
+a {
+    //color: $link_color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+a,
+button {
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+a,
+p,
+li,
+td,
+span {
+    font-size: $base_font_size;
+    line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    margin: 0;
+    //color: $title-color;
+}
+
+h2 {
+    font-size: $header2_font_size;
+}
